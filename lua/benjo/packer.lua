@@ -24,10 +24,9 @@ return require('packer').startup(function(use)
         {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
-    -- treesitter
     use {
-        'nvim-treesitter/nvim-treesitter', 
-        run = function() 
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
             local ts_update = require('nvim-treesitter.install').update({with_sync = true})
             ts_update()
         end,
@@ -39,11 +38,12 @@ return require('packer').startup(function(use)
     -- telescope
 
     use {
-        'nvim-telescope/telescope.nvim', tag='0.1.0', 
+        'nvim-telescope/telescope.nvim', tag='0.1.0',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
-    use("theprimeagen/harpoon")
+    use('theprimeagen/harpoon')
 
     use('ggandor/leap.nvim')
+    use('github/copilot.vim')
 
 end)
