@@ -61,18 +61,7 @@ return require('packer').startup(function(use)
 
     use('ggandor/leap.nvim')
 
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({
-                filetypes = {
-                    yaml = true
-                }
-            })
-        end,
-    }
+    use('github/copilot.vim')
 
     if packer_bootstrap then
         require('packer').sync()
