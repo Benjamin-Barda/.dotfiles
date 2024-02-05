@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/mini.nvim",
     url = "https://github.com/echasnovski/mini.nvim"
   },
+  moonfly = {
+    loaded = true,
+    path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/moonfly",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/nvim-cmp",

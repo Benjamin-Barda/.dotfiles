@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
 
     -- theme
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ 'bluz71/vim-moonfly-colors', as='moonfly'})
 
     -- telescope
 
