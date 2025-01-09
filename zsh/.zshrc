@@ -105,3 +105,10 @@ source $ZSH/oh-my-zsh.sh
 alias nvim="~/nvim.appimage"
 alias zao="Documents/zao"
 alias tmux-sessionizer='~/tmux-sessionizer'
+
+export PATH=$PATH:$HOME/personal/rust/izsam_cli/target/release
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
+
+export IBM_DB_INSTALLER_PATH="/home/benjamin/go/pkg/mod/github.com/ibmdb/go_ibm_db@v0.5.0/installer"
+
