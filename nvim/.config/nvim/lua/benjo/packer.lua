@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     -- telescope
 
     use {
-        'nvim-telescope/telescope.nvim', tag='0.1.0',
+        'nvim-telescope/telescope.nvim', tag='0.1.8',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
     use('theprimeagen/harpoon')
@@ -62,6 +62,8 @@ return require('packer').startup(function(use)
     use('ggandor/leap.nvim')
 
     use('github/copilot.vim')
+
+    use('windwp/nvim-ts-autotag')
 
     if packer_bootstrap then
         require('packer').sync()
