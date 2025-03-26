@@ -92,7 +92,7 @@ _G.packer_plugins = {
   harpoon = {
     loaded = true,
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/theprimeagen/harpoon"
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["leap.nvim"] = {
     loaded = true,

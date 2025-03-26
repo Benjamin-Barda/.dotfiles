@@ -43,3 +43,6 @@ vim.keymap.set("n","<leader>so", "<cmd>SymbolsOutline<CR>")
 
 
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+
+vim.keymap.del("n", "<C-w>d")
+vim.keymap.del("n", "<C-w><C-d>")
