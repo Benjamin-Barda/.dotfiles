@@ -73,6 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     zsh-autosuggestions
+    kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,14 +104,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate /.oh-my-zsh"
 alias nvim="~/nvim.appimage"
-alias zao="Documents/zao"
 alias tmux-sessionizer='~/tmux-sessionizer'
+alias kube-switcher='~/kube-switcher'
+alias vpnconnect="sudo openfortivpn vpn.activadigital.it:10443 --saml-login --trusted-cert 633a8948a1809af3ba300571d23ed8fba0d0b01ed8833da6964f63945a485980"
 
-export PATH=$PATH:$HOME/personal/rust/izsam_cli/target/release
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/go/bin
 
-export IBM_DB_INSTALLER_PATH="/home/benjamin/go/pkg/mod/github.com/ibmdb/go_ibm_db@v0.5.0/installer"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -22,14 +22,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
         vim.keymap.set({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-        vim.keymap.set('n', '<leader>q', function()
-            if vim.fn.getwininfo(vim.fn.win_getid())[1].loclist == 1 then
-                vim.cmd('lclose')
-            elseif vim.bo.buftype == 'quickfix' then
-                vim.cmd('cclose')
-            end
-        end, { desc = 'Close quickfix or location list' })
-    end
+        vim.keymap.set('n', '<leader>q', '<cmd>cclose<cr>', opts)
+    end,
 })
 
 vim.diagnostic.config({
@@ -60,6 +54,27 @@ require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {
         default_setup,
+        yamlls = function()
+            require('lspconfig').yamlls.setup({
+                capabilities = lsp_capabilities,
+                on_attach = function(client, bufnr)
+                    -- Disable diagnostics for helm files
+                    if vim.bo[bufnr].filetype == 'helm' then
+                        vim.diagnostic.disable(bufnr)
+                    end
+                end,
+                settings = {
+                    yaml = {
+                        -- Additional yamlls settings can go here
+                        validate = true,
+                        -- Disable validation for helm files at the language server level
+                        schemas = {
+                            -- You can add specific schemas here if needed
+                        },
+                    },
+                },
+            })
+        end,
     },
 })
 
@@ -89,3 +104,15 @@ cmp.setup({
         end,
     },
 })
+
+vim.filetype.add({
+  extension = {
+    gotmpl = 'gotmpl',
+  },
+  pattern = {
+    [".*/templates/.*%.tpl"] = "helm",
+    [".*/templates/.*%.ya?ml"] = "helm",
+    ["helmfile.*%.ya?ml"] = "helm",
+  },
+})
+
