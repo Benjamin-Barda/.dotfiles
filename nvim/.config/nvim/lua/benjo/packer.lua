@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use "nvim-lua/plenary.nvim"
     -- lsp
-    
+
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
@@ -53,11 +53,48 @@ return require('packer').startup(function(use)
 
     use { 'echasnovski/mini.nvim', branch = 'stable' }
 
-    use('ggandor/leap.nvim')
-
     use('github/copilot.vim')
 
     use('windwp/nvim-ts-autotag')
+
+    use {
+        "ThePrimeagen/99",
+        config = function()
+            local _99 = require("99")
+            local cwd = vim.uv.cwd()
+            local basename = vim.fs.basename(cwd)
+            require('99').setup({
+                logger = {
+                    level = _99.DEBUG,
+                    path = "/tmp/" .. basename .. "101.log",
+                    print_on_error = true,
+                },
+                model = "github-copilot/gemini-3-pro-preview"
+,
+            })
+
+            vim.keymap.set("n", "<leader>9f", function()
+                _99.fill_in_function_prompt()
+            end)
+
+            vim.keymap.set("v", "<leader>9v", function()
+                _99.visual_prompt()
+            end)
+
+            vim.keymap.set("n", "<leader>9d", function()
+                _99.stop_all_requests()
+            end)
+        end,
+    }
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = {
+                "markdown" }
+        end,
+        ft = { "markdown" },
+    })
 
     if packer_bootstrap then
         require('packer').sync()

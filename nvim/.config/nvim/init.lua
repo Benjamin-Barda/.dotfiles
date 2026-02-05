@@ -1,6 +1,4 @@
 require("benjo")
-require('leap').add_default_mappings()
-
 -- require("cmz").setup()
 
 vim.filetype.add({

@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["99"] = {
+    config = { "\27LJ\2\n1\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\28fill_in_function_prompt'\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\18visual_prompt+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests¢\3\1\0\n\0\26\00026\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0026\3\0\0'\5\1\0B\3\2\0029\3\a\0035\5\14\0005\6\t\0009\a\b\0=\a\n\6'\a\v\0\18\b\2\0'\t\f\0&\a\t\a=\a\r\6=\6\15\5B\3\2\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\19\0003\a\20\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\21\0'\6\22\0003\a\23\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\24\0003\a\25\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9d\0\15<leader>9v\6v\0\15<leader>9f\6n\bset\vkeymap\vlogger\1\0\2\nmodel%github-copilot/claude-sonnet-4.5\vlogger\0\tpath\f101.log\n/tmp/\nlevel\1\0\3\tpath\0\nlevel\0\19print_on_error\2\nDEBUG\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0" },
+    loaded = true,
+    path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/99",
+    url = "https://github.com/ThePrimeagen/99"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -94,10 +100,12 @@ _G.packer_plugins = {
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["leap.nvim"] = {
-    loaded = true,
-    path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/leap.nvim",
-    url = "https://github.com/ggandor/leap.nvim"
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/benjamin/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -162,6 +170,21 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: markdown-preview.nvim
+time([[Setup for markdown-preview.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
+time([[Setup for markdown-preview.nvim]], false)
+-- Config for: 99
+time([[Config for 99]], true)
+try_loadstring("\27LJ\2\n1\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\28fill_in_function_prompt'\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\18visual_prompt+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests¢\3\1\0\n\0\26\00026\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0026\3\0\0'\5\1\0B\3\2\0029\3\a\0035\5\14\0005\6\t\0009\a\b\0=\a\n\6'\a\v\0\18\b\2\0'\t\f\0&\a\t\a=\a\r\6=\6\15\5B\3\2\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\19\0003\a\20\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\21\0'\6\22\0003\a\23\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\24\0003\a\25\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9d\0\15<leader>9v\6v\0\15<leader>9f\6n\bset\vkeymap\vlogger\1\0\2\nmodel%github-copilot/claude-sonnet-4.5\vlogger\0\tpath\f101.log\n/tmp/\nlevel\1\0\3\tpath\0\nlevel\0\19print_on_error\2\nDEBUG\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0", "config", "99")
+time([[Config for 99]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
