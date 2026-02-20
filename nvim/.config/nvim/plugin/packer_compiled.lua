@@ -75,7 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["99"] = {
-    config = { "\27LJ\2\n1\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\28fill_in_function_prompt'\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\18visual_prompt+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests¢\3\1\0\n\0\26\00026\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0026\3\0\0'\5\1\0B\3\2\0029\3\a\0035\5\14\0005\6\t\0009\a\b\0=\a\n\6'\a\v\0\18\b\2\0'\t\f\0&\a\t\a=\a\r\6=\6\15\5B\3\2\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\19\0003\a\20\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\21\0'\6\22\0003\a\23\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\24\0003\a\25\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9d\0\15<leader>9v\6v\0\15<leader>9f\6n\bset\vkeymap\vlogger\1\0\2\nmodel%github-copilot/claude-sonnet-4.5\vlogger\0\tpath\f101.log\n/tmp/\nlevel\1\0\3\tpath\0\nlevel\0\19print_on_error\2\nDEBUG\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0" },
+    config = { "\27LJ\2\n \0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\vvisual+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests \0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\vsearchL\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17select_model\02899.extensions.telescope\frequireO\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20select_provider\02899.extensions.telescope\frequireõ\4\1\0\b\0$\0B6\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0029\3\a\0005\5\t\0009\6\b\0=\6\n\0055\6\f\0009\a\v\0=\a\r\6=\6\14\0055\6\16\0005\a\15\0=\a\17\0064\a\0\0=\a\18\6=\6\19\0055\6\20\0=\6\21\5B\3\2\0016\3\2\0009\3\22\0039\3\23\3'\5\24\0'\6\25\0003\a\26\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\24\0'\6\27\0003\a\28\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6\30\0003\a\31\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6 \0003\a!\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6\"\0003\a#\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9p\0\15<leader>9m\0\15<leader>9s\6n\0\15<leader>9x\0\15<leader>9v\6v\bset\vkeymap\rmd_files\1\2\0\0\rAGENT.md\15completion\nfiles\17custom_rules\1\0\3\vsource\bcmp\17custom_rules\0\nfiles\0\1\2\0\0\26scratch/custom_rules/\vlogger\nlevel\1\0\3\19print_on_error\2\nlevel\0\tpath\15~/99.debug\nDEBUG\rprovider\1\0\4\rprovider\0\rmd_files\0\15completion\0\vlogger\0\21OpenCodeProvider\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0" },
     loaded = true,
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/99",
     url = "https://github.com/ThePrimeagen/99"
@@ -166,6 +166,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/benjamin/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   }
 }
 
@@ -176,7 +181,7 @@ try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\
 time([[Setup for markdown-preview.nvim]], false)
 -- Config for: 99
 time([[Config for 99]], true)
-try_loadstring("\27LJ\2\n1\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\28fill_in_function_prompt'\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\18visual_prompt+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests¢\3\1\0\n\0\26\00026\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0026\3\0\0'\5\1\0B\3\2\0029\3\a\0035\5\14\0005\6\t\0009\a\b\0=\a\n\6'\a\v\0\18\b\2\0'\t\f\0&\a\t\a=\a\r\6=\6\15\5B\3\2\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\19\0003\a\20\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\21\0'\6\22\0003\a\23\0B\3\4\0016\3\2\0009\3\16\0039\3\17\3'\5\18\0'\6\24\0003\a\25\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9d\0\15<leader>9v\6v\0\15<leader>9f\6n\bset\vkeymap\vlogger\1\0\2\nmodel%github-copilot/claude-sonnet-4.5\vlogger\0\tpath\f101.log\n/tmp/\nlevel\1\0\3\tpath\0\nlevel\0\19print_on_error\2\nDEBUG\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0", "config", "99")
+try_loadstring("\27LJ\2\n \0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\vvisual+\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\22stop_all_requests \0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\vsearchL\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\17select_model\02899.extensions.telescope\frequireO\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20select_provider\02899.extensions.telescope\frequireõ\4\1\0\b\0$\0B6\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1B\1\1\0026\2\2\0009\2\5\0029\2\6\2\18\4\1\0B\2\2\0029\3\a\0005\5\t\0009\6\b\0=\6\n\0055\6\f\0009\a\v\0=\a\r\6=\6\14\0055\6\16\0005\a\15\0=\a\17\0064\a\0\0=\a\18\6=\6\19\0055\6\20\0=\6\21\5B\3\2\0016\3\2\0009\3\22\0039\3\23\3'\5\24\0'\6\25\0003\a\26\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\24\0'\6\27\0003\a\28\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6\30\0003\a\31\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6 \0003\a!\0B\3\4\0016\3\2\0009\3\22\0039\3\23\3'\5\29\0'\6\"\0003\a#\0B\3\4\0012\0\0€K\0\1\0\0\15<leader>9p\0\15<leader>9m\0\15<leader>9s\6n\0\15<leader>9x\0\15<leader>9v\6v\bset\vkeymap\rmd_files\1\2\0\0\rAGENT.md\15completion\nfiles\17custom_rules\1\0\3\vsource\bcmp\17custom_rules\0\nfiles\0\1\2\0\0\26scratch/custom_rules/\vlogger\nlevel\1\0\3\19print_on_error\2\nlevel\0\tpath\15~/99.debug\nDEBUG\rprovider\1\0\4\rprovider\0\rmd_files\0\15completion\0\vlogger\0\21OpenCodeProvider\nsetup\rbasename\afs\bcwd\auv\bvim\a99\frequire\0", "config", "99")
 time([[Config for 99]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]

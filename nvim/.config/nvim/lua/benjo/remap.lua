@@ -40,9 +40,11 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n","<leader>so", "<cmd>SymbolsOutline<CR>")
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
 
 
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
 
 vim.keymap.del("n", "<C-w>d")
 vim.keymap.del("n", "<C-w><C-d>")
+
