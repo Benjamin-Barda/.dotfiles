@@ -140,6 +140,18 @@ return require('packer').startup(function(use)
                 _99.visual()
             end)
 
+            vim.keymap.set("v", "<leader>9wd", function()
+                _99.Extensions.Worker.set_work()
+            end)
+
+            vim.keymap.set("v", "<leader>9wg", function()
+                _99.Extensions.Worker.current_work_item()
+            end)
+
+            vim.keymap.set("v", "<leader>9ww", function()
+                _99.Extensions.Worker.work()
+            end)
+
             --- if you have a request you dont want to make any changes, just cancel it
             vim.keymap.set("v", "<leader>9x", function()
                 _99.stop_all_requests()
